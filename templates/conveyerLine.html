@@ -1,0 +1,420 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block left %}
+		<!-- left slider -->
+		<div id="sidebar-nav" class="sidebar">
+			<div class="sidebar-scroll">
+				<nav>
+					<ul class="nav">
+						<!-- 设备概况 -->
+						<li>
+							<a href="{% url 'index' %}" class="">
+								<i class="fa fa-th-large"></i>
+								<span>设备概况</span>
+							</a>
+						</li>
+						<!-- 设备数据 -->
+						<!-- 设备数据 -->
+                        <!-- 用户配置 -->
+                        <li>
+                        <a href="#userConf_twoMenu" data-toggle="collapse" class="collapsed">
+                            <i class="fa fa-user"></i>
+                            <span>用户配置</span>
+                            <i class="icon-submenu fa fa-angle-left"></i>
+                        </a>
+                        <div id="userConf_twoMenu" class="collapse">
+                            <ul class="nav">
+                                <li>
+                                    <a href="/userConf/" class="active">
+                                        <i class="fa fa-user-plus"></i>
+                                        用户管理
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        </li>
+						<li>
+							<a href="#empData_twoMenu" data-toggle="collapse" class="active">
+								<i class="fa fa-file-text"></i>
+								<span>设备数据</span>
+								<i class="icon-submenu fa fa-angle-left"></i>
+							</a>
+							<div id="empData_twoMenu" class="collapse in" aria-expanded="true">
+								<ul class="nav">
+									<li>
+										<a href="#ssx_threeMenu" data-toggle="collapse" class="active">
+											<i class="fa fa-random"></i>
+											<span>输送线数据</span>
+											<i class="icon-submenu fa fa-angle-left"></i>
+										</a>
+                                        {% block active %}
+										<div id="ssx_threeMenu" class="collapse in" aria-expanded="true">
+											<ul class="nav">
+                                                <li><a href="/conveyerLine/" class="active">扫描节点记录</a></li>
+                                                <li><a href="/Address/">OPC地址记录</a></li>
+                                                <li><a href="/Rddress/">串口记录</a></li>
+											</ul>
+										</div>
+                                       {% endblock %}
+                                    </li>
+									<!--<li><a href="#" class="">电子标签数据</a><>
+									<li><a href="#" class="">货到人数据</a><>-->
+								</ul>
+							</div>
+                        </li>
+                        <!-- 日志管理 -->
+                        <li>
+                            <a href="#logMnt_twoMenu" data-toggle="collapse" class="collapsed">
+                                <i class="fa fa-calculator"></i>
+                                <span>日志管理</span>
+                                <i class="icon-submenu fa fa-angle-left"></i>
+                            </a>
+                            <div id="logMnt_twoMenu" class="collapse">
+                                <ul class="nav">
+                                    <li>
+                                        <a href="#ssxLog_threeMenu" data-toggle="collapse" class="collapsed">
+                                            <i class="fa fa-arrows"></i>
+                                            <span>输送线日志</span>
+                                            <i class="icon-submenu fa fa-angle-left"></i>
+                                        </a>
+                                        <div id="ssxLog_threeMenu" class="collapse">
+                                            <ul class="nav">
+                                                <li><a href="/lineNomalLog/">输送线异常日志</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+    {% endblock %}
+{% block content %}
+    <!-- main -->
+    <div class="main">
+        <!-- table -->
+        <div class="main-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- BORDERED TABLE -->
+                        <div class="panel panel-table">
+                            <div class="panel-heading">
+                                <h4>设备工作状态</h4>
+                            {% block address %}
+                                <div class="operaBtns">
+                                    <div class="operaBtn">
+                                        <form action="">
+                                            <a class="tbAdd btnOpe " data-toggle="modal" data-target="#addModal">
+                                                <i class="fa fa-plus-square-o"></i>
+                                                新增
+                                            </a>
+                                        </form>
+                                    </div>
+
+                                    <div class="operaBtn">
+
+                                            <a class="tbEdt btnOpe" href="/conveyerLine/">
+                                                <i class="fa fa-refresh"></i>
+                                                刷新
+                                            </a>
+
+                                    </div>
+                                    <div class="operaBtn">
+
+                                            <a   class="tbSve btnOpe" onclick="delRow()">
+                                                <i class="fa fa-trash-o"></i>
+                                                    删除
+                                            </a>
+
+                                    </div>
+                                </div>
+                                <!--新增模态框-->
+                                <form action="/Add/" method="get">
+                                    {% csrf_token %}
+                                    <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modalHeader">
+                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                                            &times;
+                                                        </button>
+                                                        <h3 class="modal-title" id="myModalLabel" >
+                                                            新增
+                                                        </h3>
+                                                    </div>
+
+                                                    <div class="modalBody">
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <div class="col-md-6">
+                                                                    <label for="eptID" class="labTh">货位ID</label>
+                                                                    <input type="text"  name="serial_nbr" value="" class="eptIpt">
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <label for="eptID" class="labTh">立体库编号</label>
+                                                                    <input type="text"   name="device_name" value="" class="eptIpt">
+                                                                </div>
+                                                            </div>
+                                                            </div>
+                                                            <div class="row">
+                                                            <div class="col-md-12">
+                                                                <div class="col-md-6">
+                                                                    <label for="eptName" class="labTh">立体库编号</label>
+                                                                    <input type="text"  name="device_zone" value="" class="eptIpt">
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <label for="eptSta" class="labTh">排</label>
+                                                                    <input type="text"  name="scan_node" value="" class="eptIpt">
+                                                                </div>
+                                                            </div>
+                                                            </div>
+                                                             <div class="row">
+                                                            <div class="col-md-12">
+                                                                <div class="col-md-6">
+                                                                    <label for="eptName" class="labTh">层</label>
+                                                                    <input type="text"  name="sca_ip" value="" class="eptIpt">
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <label for="eptSta" class="labTh">列</label>
+                                                                    <input type="text"  name="scan_port" value="" class="eptIpt">
+                                                                </div>
+                                                            </div>
+                                                            </div>
+                                                    </div>
+                                                    <div class="modalFooter">
+                                                        <button type="submit" class="modalBtn">
+                                                                保存
+                                                        </button>
+                                                    </div>
+                                                </div><!-- /.modal-content -->
+                                            </div><!-- /.modal -->
+                                        </div>
+                                    </form>
+
+
+
+
+                            <!--更改数据模态框-->
+                                <form action="/Midified/" method="get">
+                                    {% csrf_token %}
+                                    <div class="modal fade" id="mdyModal" tabindex="-1" role="dialog" aria-labelledby="mdyModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modalHeader">
+                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                                            &times;
+                                                        </button>
+                                                        <h3 class="modal-title" id="mdyModalLabel" >
+                                                            修改
+                                                        </h3>
+                                                    </div>
+
+                                                    <div class="modalBody mdymodalBody"  style="height: 200px;">
+                                                            <div class="row">
+                                                            <div class="col-md-12">
+                                                                <div class="col-md-6">
+                                                                    <label for="eptID" class="labTh">货位ID</label>
+                                                                    <input type="text"  name="serial_nbr" value="" class="eptIpt">
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <label for="eptID" class="labTh">立体库编号</label>
+                                                                    <input type="text"   name="device_name" value="" class="eptIpt">
+                                                                </div>
+                                                            </div>
+                                                            </div>
+                                                            <div class="row">
+                                                            <div class="col-md-12">
+                                                                <div class="col-md-6">
+                                                                    <label for="eptName" class="labTh">立体库编号</label>
+                                                                    <input type="text"  name="device_zone" value="" class="eptIpt">
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <label for="eptSta" class="labTh">排</label>
+                                                                    <input type="text"  name="scan_node" value="" class="eptIpt">
+                                                                </div>
+                                                            </div>
+                                                            </div>
+                                                             <div class="row">
+                                                            <div class="col-md-12">
+                                                                <div class="col-md-6">
+                                                                    <label for="eptName" class="labTh">层</label>
+                                                                    <input type="text"  name="sca_ip" value="" class="eptIpt">
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <label for="eptSta" class="labTh">列</label>
+                                                                    <input type="text"  name="scan_port" value="" class="eptIpt">
+                                                                </div>
+                                                            </div>
+                                                            </div>
+                                                    </div>
+
+                                                    <div class="modalFooter">
+                                                    <button type="submit" class="modalBtn"   >
+                                                            保存
+                                                    </button>
+                                                    </div>
+                                                </div><!-- /.modal-content -->
+                                            </div><!-- /.modal -->
+                                        </div>
+                                    </form>
+                            <div class="panel-body">
+                                <div  class="col-md-12 overTb">
+                                <form action="/Search/" method="get">
+                                    <div class="row">
+                                        <div class="form-group">
+                                            <input type="text" name="device_name" id="sbIpt" placeholder="输入设备编号">
+                                            <button id="sbBtn" class=" fa fa-search"></button>
+                                        </div>
+                                    </div>
+                                </form>
+                                <div class="col-md-12">
+                                <form action="">
+                                    <div class="row">
+                                        <input type="text" id="txtIpt" onblur="save(this)"/>
+                                    </div>
+                                    <div class="row">
+                                    <div class="tbodyBox">
+                                    <table class="table table-bordered " id="opeTb">
+                                        <thead >
+                                        <tr id="addTH" >
+                                            <th>操作</th>
+                                            <th>货位ID</th>
+                                            <th>立体库编号</th>
+                                            <th>排</th>
+                                            <th>层</th>
+                                            <th>列</th>
+                                            <th>分组</th>
+                                            <th>系统状态</th>
+                                            <th>设备状态</th>
+                                            <th>货位状态</th>
+                                            <th>插入时间</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody id="tbody">
+
+                                        {% if list_sbid %}
+                                            {% for b in list_sbid %}
+                                        <tr >
+                                            <td>
+
+                                                <input type="checkbox" class="delChk">
+                                            </td>
+                                            <td>{{ b.serial_nbr }}</td>
+                                            <td>{{ b.device_name }}</td>
+                                            <td >{{ b.device_zone }}</td>
+                                            <td >{{ b.scan_node }}</td>
+                                            <td >{{ b.scan_ip }}</td>
+                                            <td >{{ b.scan_port }}</td>
+                                        </tr>
+                                            {% endfor %}
+                                        {% else %}
+                                            {% for a in all_list %}
+
+                                        <tr >
+                                            <td>
+                                                <input type="checkbox" class="delChk">
+                                            </td>
+                                            <td >HW902371</td>
+                                            <td >2</td>
+                                            <td >1</td>
+                                            <td >1</td>
+                                            <td>1050</td>
+                                            <td>13</td>
+                                            <td>50</td>
+                                            <td>否</td>
+                                            <td>是</td>
+                                            <td>2019-10-10</td>
+                                        </tr>
+                                             {% endfor %}
+                                        {% endif %}
+                                        </tbody>
+                                    </table>
+                                    </div>
+                                    </div>
+                                </form>
+                                </div>
+                                <div id="barcon" class="barcon" >
+                                    <div id="barcon1" class="barcon1"></div>
+                                    <div id="barcon2" class="barcon2">
+                                        <ul>
+                                            <li><a id="firstPage">首页</a></li>
+                                            <li><a id="prePage">上一页</a></li>
+                                            <li><a id="nextPage">下一页</a></li>
+                                            <li><a id="lastPage">尾页</a></li>
+                                            <li><input id="jumpWhere"></li>
+                                            <li><a id="jumpPage" onclick="jumpPage()">跳转</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            {% endblock %}
+                            </div>
+
+                        <!-- END BORDERED TABLE -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript" src="{% static 'js/jquery-1.12.4.min.js' %}"></script>
+<script src="{%  static 'js/table.js' %}"></script>
+<script src="{%  static 'js/page.js' %}"></script>
+
+<script type="text/javascript">
+    function deleteRow(serial_nbr){
+        console.log(serial_nbr);
+        del=confirm('确定要删除吗？');
+        $.ajax({
+                url: '/Delete/',
+                type: 'get',
+                datatype: 'json',
+                data:{
+                    'serial_nbr':serial_nbr
+                },
+            success:function (data) {
+                        location.href  ="{% url 'conveyerLine' %}";
+                    },
+            })
+        }
+    function labelNam(){
+    var th=document.getElementById("addTh").getElementsByTagName("th");
+    console.log(th);
+    var arr=[];
+    for(var i=0;i<th.length;i++){
+        var thText=th[i].innerHTML;
+        //console.log(typeof thText.length);
+        /*if(thText.length < 4){
+            $(".labTh").css("padding-left","30px");
+        }*/
+        arr.push(thText);
+    }
+    var labTh=document.getElementsByClassName("labTh");
+    for(var a=0;a<arr.length;a++){
+        for(var b=a;b<labTh.length;b++){
+            labTh[b].innerHTML=arr[a];
+        }
+
+    }
+
+
+
+}
+    function addSubmit(){
+    $("#addModal").css("display","none");
+    $(".modal-backdrop").css("display","none");
+}
+</script>
+{% endblock %}
+
+

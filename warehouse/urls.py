@@ -1,0 +1,32 @@
+from django.conf.urls import url
+from warehouse import views
+
+urlpatterns = [
+    url(r'^$', views.login, name='login'),
+    url(r'^index/$', views.index, name='index'),
+    url(r'^conveyerLine/$', views.conveyerLine, name='conveyerLine'),
+    url(r'^Search/$', views.Search, name='Search'),
+    url(r'^login_out/$', views.login_out, name='login_out'),
+    url(r'^Add/$', views.Add, name='Add'),
+    url(r'^Delete/$', views.Delete, name='Delete'),
+    url(r'^Midified/$', views.Midified, name='Midified'),
+    url(r'^Address/$', views.Address, name='Address'),
+    url(r'^Addr_Search/$', views.Addr_Search, name='Addr_Search'),
+    url(r'^Addr_Add/$', views.Addr_Add, name='Addr_Add'),
+    url(r'^Addr_Delete/$', views.Addr_Delete, name='Addr_Delete'),
+    url(r'^Addr_Midified/$', views.Addr_Midified, name='Addr_Midified'),
+    url(r'^Rddress/$', views.Rddress, name='Rddress'),
+    url(r'^Route_Search/$', views.Route_Search, name='Route_Search'),
+    url(r'^Route_Add/$', views.Route_Add, name='Route_Add'),
+    url(r'^Route_Delete/$', views.Route_Delete, name='Route_Delete'),
+    url(r'^Route_Midified/$', views.Route_Midified, name='Route_Midified'),
+    url(r'^lineNomalLog/$', views.lineNomalLog, name='lineNomalLog'),
+    url(r'^Rizhi_Search/$', views.Rizhi_Search, name='Rizhi_Search'),
+    url(r'^output/$', views.output, name='output'),
+    url(r'^userConf/$', views.userConf, name='userConf'),
+    url(r'^add_user/$', views.add_user, name='add_user'),
+    url(r'^user_Search/$', views.user_Search, name='user_Search'),
+    url(r'^Pwd_Midified/$', views.Pwd_Midified, name='Pwd_Midified'),
+    url(r'^deluser/$', views.deluser, name='deluser'),
+    url(r'^user_states/$', views.user_states, name='user_states'),
+]

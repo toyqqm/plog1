@@ -1,0 +1,242 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block left %}
+<div id="sidebar-nav" class="sidebar">
+            <div class="sidebar-scroll">
+                <nav>
+                    <ul class="nav">
+                        <!-- 设备概况 -->
+                        <li>
+                            <a href="/index/" class="">
+                                <i class="fa fa-line-chart"></i>
+                                <span>设备概况</span>
+                            </a>
+                        </li>
+                        <!-- 用户配置 -->
+                        <li>
+                        <a href="#userConf_twoMenu" data-toggle="collapse" class="collapsed">
+                            <i class="fa fa-user"></i>
+                            <span>用户配置</span>
+                            <i class="icon-submenu fa fa-angle-left"></i>
+                        </a>
+                        <div id="userConf_twoMenu" class="collapse">
+                            <ul class="nav">
+                                <li>
+                                    <a href="/userConf/" class="active">
+                                        <i class="fa fa-user-plus"></i>
+                                        用户管理
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                        <!-- 设备数据 -->
+                        <li>
+                            <a href="#empData_twoMenu" data-toggle="collapse" class="collapsed">
+                                <i class="fa fa-file-text"></i>
+                                <span>设备数据</span>
+                                <i class="icon-submenu fa fa-angle-left"></i>
+                            </a>
+                            <div id="empData_twoMenu" class="collapse">
+                                <ul class="nav">
+                                    <li>
+                                        <a href="#ssx_threeMenu" data-toggle="collapse">
+                                            <i class="fa fa-random"></i>
+                                            <span>输送线数据</span>
+                                            <i class="icon-submenu fa fa-angle-left"></i>
+                                        </a>
+                                        <div id="ssx_threeMenu" class="collapse">
+                                            <ul class="nav">
+                                                <li><a href="/conveyerLine/">扫描节点记录</a></li>
+                                                <li><a href="/Address/">OPC地址记录</a></li>
+                                                <li><a href="/Rddress/">串口记录</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <!-- 日志管理 -->
+                        <li>
+                            <a href="#logMnt_twoMenu" data-toggle="collapse" class="active" aria-expanded="true">
+                                <i class="fa fa-calculator"></i>
+                                <span>日志管理</span>
+                                <i class="icon-submenu fa fa-angle-left"></i>
+                            </a>
+                            <div id="logMnt_twoMenu" class="collapse in">
+                                <ul class="nav">
+                                    <li>
+                                        <a href="#ssxLog_threeMenu" data-toggle="collapse"  class="active" aria-expanded="true">
+                                            <i class="fa fa-arrows"></i>
+                                            <span>输送线日志</span>
+                                            <i class="icon-submenu fa fa-angle-left"></i>
+                                        </a>
+                                        <div id="ssxLog_threeMenu" class="collapse in">
+                                            <ul class="nav">
+                                                <li><a href="/lineNomalLog/" class="active">输送线异常日志</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    {% endblock %}
+    <!-- mian head-->
+    {% block content %}
+    {% block  xl%}
+    <div class="main mainHead">
+        <div class="main-content">
+            <div class="container-fluid">
+                <div class="row">
+                   <div class="col-md-12">
+                           <div class="panel panel-heading">
+                               <h4>电子标签异常日志</h4>
+                               <div class="condition">
+                                   <form action="/Rizhi_Search/" method="post">
+                                       {% csrf_token %}
+                                       <div class="row">
+                                            <div class="col-md-3">
+
+                                                <div class="form-group">
+                                                   <label for="logType" >日志类型</label>
+                                                    <select id="logType" name="dropdown">
+                                                        <option value=""></option>
+                                                        <option id="rizhileixing" value="读码日志">读码日志</option>
+                                                        <option id="rizhileixing" value="异常日志">异常日志</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label for="kwdIpt">日志关键字</label>
+                                                    <input type="text" id="kwdIpt" name="rizhiguanjianzi" autocomplete="off">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-5">
+                                                <div class="form-group">
+                                                    <label>日志时间</label>
+                                                    <input type="text" id="staDpk" name="datetime1" placeholder="开始时间" autocomplete="off"  > -
+                                                    <input type="text"  id="endDpk" name="datetime2" placeholder="结束时间" autocomplete="off"  >
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1 mainHead-btnQue">
+                                                <button class="ssxBtn ssxQue"  type="submit">搜索</button>
+                                            </div>
+                                        </div>
+                                </form>
+                               </div>
+                           </div>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+    <!-- main body -->
+    <div class="main mainBody">
+        <div class="main-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- BORDERED TABLE -->
+                        <div class="panel panel-table">
+                            <div class="panel-body">
+                                <div class="col-md-12 overTb">
+{#                                    <a href="/output/"><button class="ssxBtn ssxExp"  type="button" onclick="choice()">导出</button></a>#}
+                                    <form action="/output/" method="post">
+                                        {% csrf_token %}
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <button class="ssxBtn ssxAll" onclick="expRows()" type="button">全选</button>
+                                                <button class="ssxBtn ssxBack" type="button">反选</button>
+                                                <button class="ssxBtn ssxExp"  type="submit">导出</button>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="tbodyBox">
+                                                <table class="table table-bordered" id="logTb">
+                                                    <thead>
+                                                    <tr id="addTh">
+                                                        <th>操作</th>
+                                                        <th>日志类型</th>
+                                                        <th>日志关键字</th>
+                                                        <th>日志编号</th>
+                                                        <th>日志明细</th>
+                                                        <th>日志时间</th>
+
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody id="tbody">
+                                                    <tr>
+                                                    {% if data_list %}
+                                                        {% for rizhi in data_list %}
+                                                        <td><input type="checkbox" class="delChk" value="{{ rizhi.id }}" name="check_box_list">{{ rizhi.id }}</td>
+                                                        <td>222091</td>
+                                                        <td >2</td>
+                                                        <td >1</td>
+                                                        <td >1</td>
+                                                        <td>1050</td>
+                                                        <td>否</td>
+                                                        <td>2019-10-10</td>
+
+
+                                                    </tr>
+                                                        {% endfor %}
+                                                     <tr>
+                                                    {% else %}
+                                                        {% for r in listrz %}
+{#                                                        <td><input type="checkbox" class="delChk" name="expArr" id="checkbox"></td> #}
+                                                        <td><input type="checkbox" class="delChk" value="{{ r.id }}" name="check_box_list">{{ r.id }}</td>
+                                                        <td>异常日志</td>
+                                                        <td >{{ r.rizhiguanjianzi }}</td>
+                                                        <td >{{ r.rizhibianhao }}</td>
+                                                        <td >1101未点亮</td>
+                                                        <td>{{ r.datatime }}</td>
+                                                    </tr>
+                                                    {% endfor %}
+                                                    {% endif %}
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <div id="barcon" class="barcon" >
+                                        <div id="barcon1" class="barcon1"></div>
+                                        <div id="barcon2" class="barcon2">
+                                            <ul>
+                                                <li><a id="firstPage">首页</a></li>
+                                                <li><a id="prePage">上一页</a></li>
+                                                <li><a id="nextPage">下一页</a></li>
+                                                <li><a id="lastPage">尾页</a></li>
+                                                <li><input id="jumpWhere"></li>
+                                                <li><a id="jumpPage" onclick="jumpPage()">跳转</a></li>
+                                            </ul>
+                                    </div>
+                                </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block footer %}
+{% endblock %}
+
+    {% block script %}
+<script src="{%  static 'js/klorofil-common.js' %}"></script>
+<script src="{%  static 'js/laydate.js' %}"></script>
+<script src="{%  static 'js/table1.js' %}"></script>
+<script src="{%  static 'js/page.js' %}"></script>
+<script type="text/javascript">
+</script>
+    {% endblock %}
+

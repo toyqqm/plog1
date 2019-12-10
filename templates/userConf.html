@@ -1,0 +1,397 @@
+{% extends 'index.html' %}
+{% load static %}
+
+
+{% block left %}
+    <!-- left slider -->
+    <div id="sidebar-nav" class="sidebar">
+        <div class="sidebar-scroll">
+            <nav>
+                <ul class="nav">
+                    <!-- 设备概况 -->
+                    <li>
+                        <a href="/index/">
+                            <i class="fa fa-line-chart"></i>
+                            <span>设备概况</span>
+                        </a>
+                    </li>
+                    <!-- 用户配置 -->
+                    <li>
+                        <a href="#userConf_twoMenu" data-toggle="collapse" class="active" aria-expanded="true">
+                            <i class="fa fa-user"></i>
+                            <span>用户配置</span>
+                            <i class="icon-submenu fa fa-angle-left"></i>
+                        </a>
+                        <div id="userConf_twoMenu" class="collapse in">
+                            <ul class="nav">
+                                <li>
+                                    <a href="/userConf/" class="active">
+                                        <i class="fa fa-user-plus"></i>
+                                        用户管理
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <!-- 设备数据 -->
+                    <li>
+                        <a href="#empData_twoMenu" data-toggle="collapse" class="collapsed">
+                            <i class="fa fa-file-text"></i>
+                            <span>设备数据</span>
+                            <i class="icon-submenu fa fa-angle-left"></i>
+                        </a>
+                        <div id="empData_twoMenu" class="collapse">
+                            <ul class="nav">
+                                <li>
+                                    <a href="#ssx_threeMenu" data-toggle="collapse" class="collapsed">
+                                        <i class="fa fa-random"></i>
+                                        <span>输送线数据</span>
+                                        <i class="icon-submenu fa fa-angle-left"></i>
+                                    </a>
+                                    <div id="ssx_threeMenu" class="collapse">
+                                        <ul class="nav">
+                                            <li><a href="/conveyerLine/">扫描节点记录</a></li>
+                                            <li><a href="/Address/">OPC地址记录</a></li>
+                                            <li><a href="/Rddress/">串口记录</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <!-- 日志管理 -->
+                    <li>
+                        <a href="#logMnt_twoMenu" data-toggle="collapse" class="collapsed">
+                            <i class="fa fa-calculator"></i>
+                            <span>日志管理</span>
+                            <i class="icon-submenu fa fa-angle-left"></i>
+                        </a>
+                        <div id="logMnt_twoMenu" class="collapse">
+                            <ul class="nav">
+                                <li>
+                                    <a href="#ssxLog_threeMenu" data-toggle="collapse" class="collapsed">
+                                        <i class="fa fa-arrows"></i>
+                                        <span>输送线日志</span>
+                                        <i class="icon-submenu fa fa-angle-left"></i>
+                                    </a>
+                                    <div id="ssxLog_threeMenu" class="collapse">
+                                        <ul class="nav">
+                                            <li><a href="{% url 'lineNomalLog' %}">输送线异常日志</a></li>
+
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+{% endblock %}
+<!-- main -->
+{% block content %}
+    <div class="main">
+        <div class="main-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- BORDERED TABLE -->
+                        <div class="panel panel-table">
+                            <div class="panel-heading">
+                                <h4>用户管理</h4>
+                                <div class="panel-body">
+                                    <!-- 模态框区域 -->
+                                    <div>
+                                        <!--添加用户模态框-->
+                                        <form action="{% url 'add_user' %}" method="post">
+                                            {% csrf_token %}
+                                            <div class="modal fade" id="addModal" tabindex="-1" role="dialog"
+                                                 aria-labelledby="addModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modalHeader">
+                                                            <button type="button" class="close" data-dismiss="modal"
+                                                                    aria-hidden="true">
+                                                                &times;
+                                                            </button>
+                                                            <h4 class="modal-title" id="addModalLabel">
+                                                                添加用户
+                                                            </h4>
+                                                        </div>
+
+                                                        <div class="modalBody addmodalBody">
+                                                            <div class="row">
+                                                                <div class="col-md-12">
+                                                                    <div class="col-md-6">
+                                                                        <label for="addUser">用户名</label>
+                                                                        <input type="text" id="addUser" name="addUser">
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <label for="password" class="labTh">密码</label>
+                                                                        <input type="text" id="password" name="password"
+                                                                               maxlength="6"
+                                                                               onkeyup="value=value.replace(/[^\w]/ig,'')"
+                                                                               PLACEHOLDER="请输入6位数密码(包含数字或字母)">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-md-12">
+                                                                    <div class="col-md-6">
+                                                                        <label for="userType" class="labTh">用户类型</label>
+                                                                        <select name="dropdown" id="userType">
+                                                                            <option value=""></option>
+                                                                            <option value="管理员">管理员</option>
+                                                                            <option value="普通用户">普通用户</option>
+                                                                        </select>
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <label for="addDate" class="labTh">添加日期</label>
+                                                                        <input type="text" id="addDate" name="addDate">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-md-12">
+                                                                    <div class="col-md-6">
+                                                                        <label for="states" class="labTh">用户状态</label>
+                                                                        <input type="text" id="addSta" name="addSta">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="modalFooter">
+                                                            <button type="submit" class="btn modalBtn addBtn">
+                                                                提交
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <!--启用/禁用、编辑、删除功能按钮模态框-->
+                                        <form action="/Pwd_Midified/" method="get">
+                                            {% csrf_token %}
+                                            <div class="modal fade" id="staModal" tabindex="-1" role="dialog"
+                                                 aria-labelledby="staModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog userConf_modal">
+                                                    <div class="modal-content">
+                                                        <div class="modalHeader">
+                                                            <button type="button" class="close" data-dismiss="modal"
+                                                                    aria-hidden="true">
+                                                                &times;
+                                                            </button>
+                                                            <h4 class="modal-title" id="staModalLabel">
+                                                            </h4>
+                                                        </div>
+                                                        <div class="modalBody stamodalBody promBody">
+                                                            <form action="">
+                                                                <!--提示框-->
+                                                                <div class="promText">
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                        <div class="modalBody stamodalBody edtBody">
+
+                                                            <!--编辑框-->
+                                                            <div class="edtText">
+                                                                <!--用户ID-->
+                                                                <div class="group">
+                                                                    <label for="userId" class="auto"></label>
+                                                                    <div class="edtDiv edtIpt">
+                                                                        <input id="userId" type="text" name="userid"
+                                                                               readonly="readonly">
+                                                                    </div>
+                                                                </div>
+                                                                <!--用户名-->
+                                                                <div class="group">
+                                                                    <label for="userName" class="auto"></label>
+                                                                    <div class="edtDiv edtIpt">
+                                                                        <input id="userName" name="userName" type="text"
+                                                                               readonly="readonly">
+                                                                    </div>
+                                                                </div>
+                                                                <!--密码-->
+                                                                <div class="group">
+                                                                    <label for="password" class="">密码</label>
+                                                                    <div class="edtDiv edtIpt">
+                                                                        <input id="password" name="password" type="text"
+                                                                               maxlength="6"
+                                                                               onkeyup="value=value.replace(/[^\w]/ig,'')"
+                                                                               placeholder="6位数密码(包含数字/字母/下划线)">
+                                                                    </div>
+                                                                </div>
+                                                                <!--修改日期-->
+                                                                <div class="group">
+                                                                    <label for="edtDate" class="auto"></label>
+                                                                    <div class="edtDiv edtIpt">
+                                                                        <input id="edtDate" name="edtDate" type="text"
+                                                                               readonly="readonly">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="modalFooter">
+                                                            <button type="submit" class="btn modalBtn">
+                                                                提交
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <!-- 表格上方功能区域 -->
+                                    <form action="{% url 'user_Search' %}" method="get">
+                                        {% csrf_token %}
+                                        <div class="tableTop">
+                                            <div class="leftBox">
+                                                <a class="addUser" data-toggle="modal" data-target="#addModal">
+                                                    <i class="fa fa-plus"></i>
+                                                    添加用户
+                                                </a>
+                                                <div class="rightBox">
+                                                    <!--<label for="user_id">用户名</label>-->
+                                                    <input type="text" id="user_id" name="username"
+                                                           placeholder="请输入用户名查询...">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <!-- 表格本体 -->
+                                    <div class="col-md-12">
+                                        <form action="">
+                                            <div class="row">
+                                                <div class="tbodyBox">
+                                                    <table class="table table-bordered" id="opeTb">
+                                                        <thead>
+                                                        <tr id="thead">
+                                                            <th>ID</th>
+                                                            <th>用户名</th>
+                                                            <th>用户类别</th>
+                                                            <th>用户状态</th>
+                                                            <th>添加时间</th>
+                                                            <th>修改时间</th>
+                                                            <th>操作</th>
+                                                        </tr>
+                                                        </thead>
+                                                        <tbody id="tbody">
+                                                        {% if list_user %}
+                                                            {% for u in list_user %}
+                                                                <tr>
+                                                                    <td>{{ u.id }}</td>
+                                                                    <td>{{ u.username }}</td>
+                                                                    <td>{{ u.authority }}</td>
+                                                                    <td>
+                                                                        <button class="userSta" type="button"
+                                                                                disabled="disabled">
+                                                                            {{ u.states }}
+                                                                        </button>
+                                                                    </td>
+                                                                    <td>{{ u.creationtimes }}</td>
+                                                                    <td>{{ u.updatetimes }}</td>
+                                                                    <td>
+                                                                        <a class="staBtn" title="启用/禁用"><i
+                                                                                class="fa fa-dot-circle-o"></i></a>
+                                                                        <a class="edtBtn" title="编辑"><i
+                                                                                class="fa fa-pencil"></i></a>
+                                                                        <a class="delBtn" title="删除"><i
+                                                                                class="fa fa-user-times"></i></a>
+                                                                    </td>
+                                                                </tr>
+                                                            {% endfor %}
+                                                        {% else %}
+                                                            {% for n in name_list %}
+                                                                <tr>
+                                                                    <td>{{ n.id }}</td>
+                                                                    <td>{{ n.username }}</td>
+                                                                    <td>{{ n.authority }}</td>
+                                                                    <td>
+                                                                        <button class="userSta" type="button"
+                                                                                disabled="disabled">
+                                                                            {{ n.states }}
+                                                                        </button>
+                                                                    </td>
+                                                                    <td>{{ n.creationtimes }}</td>
+                                                                    <td>{{ n.updatetimes }}</td>
+                                                                    <td>
+                                                                        <a class="staBtn" title="启用/禁用"><i
+                                                                                class="fa fa-dot-circle-o"></i></a>
+                                                                        <a class="edtBtn" title="编辑"><i
+                                                                                class="fa fa-pencil"></i></a>
+                                                                        <a class="delBtn" title="删除"><i
+                                                                                class="fa fa-user-times"></i></a>
+                                                                    </td>
+                                                                </tr>
+                                                            {% endfor %}
+                                                        {% endif %}
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <!-- 表格分页操作 -->
+                                        <div id="barcon" class="barcon">
+                                            <div id="barcon1" class="barcon1"></div>
+                                            <div id="barcon2" class="barcon2">
+                                                <ul>
+                                                    <li><a id="firstPage">首页</a></li>
+                                                    <li><a id="prePage">上一页</a></li>
+                                                    <li><a id="nextPage">下一页</a></li>
+                                                    <li><a id="lastPage">尾页</a></li>
+                                                    <li><input id="jumpWhere"></li>
+                                                    <li><a id="jumpPage" onclick="jumpPage()">跳转</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block footer %}
+{% endblock %}
+
+
+
+{% block script %}
+    <script src="{% static 'js/userConf.js' %}"></script>
+    <script src="{% static 'js/page.js' %}"></script>
+    <script type="text/javascript">
+        function deleteRow(userSta) {
+            $.ajax({
+                url: '/deluser/',
+                type: 'get',
+                datatype: 'json',
+                data: {
+                    'userSta': userSta
+                },
+                {#success:function (data) {#}
+                {#            location.href  ="{% url 'userConf' %}";#}
+                {#        },#}
+            })
+        }
+
+        function modify_states(staVal, userid) {
+            $.ajax({
+                url: '/user_states/',
+                type: 'get',
+                datatype: 'json',
+                data: {
+                    'staVal': staVal,
+                    'userid': userid,
+                },
+                success: function (data) {
+                    location.href = "{% url 'userConf' %}";
+                },
+            })
+        }
+    </script>
+{% endblock %}

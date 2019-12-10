@@ -1,0 +1,837 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d1e265e8-8a6f-4e70-bf7f-340ef6cff9f8" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/plog1$models.coverage" NAME="models Coverage Results" MODIFIED="1542115934545" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/warehouse" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="plog1" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/warehouse/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="5340">
+              <caret line="368" selection-start-line="368" selection-end-line="368" />
+              <folding>
+                <element signature="e#0#53#0" expanded="true" />
+                <marker date="1571709251626" expanded="true" signature="751:764" ph="..." />
+                <marker date="1571709251626" expanded="true" signature="2579:2584" ph="..." />
+                <marker date="1571709251626" expanded="true" signature="7309:7314" ph="..." />
+                <marker date="1571709251626" expanded="false" signature="7407:7408" ph="..." />
+                <marker date="1571709251626" expanded="true" signature="7808:7813" ph="..." />
+                <marker date="1571709251626" expanded="false" signature="8230:8231" ph="..." />
+                <marker date="1571709251626" expanded="true" signature="8612:8613" ph="..." />
+                <marker date="1571709251626" expanded="true" signature="13518:13519" ph="..." />
+                <marker date="1571709251626" expanded="true" signature="15706:15711" ph="..." />
+                <marker date="1571709251626" expanded="true" signature="16006:16011" ph="..." />
+                <marker date="1571709251626" expanded="true" signature="16464:16469" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/warehouse/HslCommunication.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3720">
+              <caret line="257" column="39" selection-start-line="257" selection-start-column="39" selection-end-line="257" selection-end-column="39" />
+              <folding>
+                <element signature="e#7647#7660#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/warehouse/supertest.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/warehouse/migrations/0001_initial.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/lineNomalLog.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1455">
+              <caret line="97" column="39" selection-start-line="97" selection-start-column="39" selection-end-line="97" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1770">
+              <caret line="118" column="41" selection-start-line="118" selection-start-column="41" selection-end-line="118" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/page-login.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/userConf.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4635">
+              <caret line="309" column="53" selection-start-line="309" selection-start-column="53" selection-end-line="309" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/conveyerLine.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2760">
+              <caret line="184" column="66" selection-start-line="184" selection-start-column="66" selection-end-line="184" selection-end-column="66" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/plog1/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="499">
+              <caret line="139" lean-forward="true" selection-start-line="139" selection-end-line="139" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>addFooter</find>
+      <find>mdyModalmdyModal</find>
+      <find>mdyModal</find>
+      <find>#mdyModal</find>
+      <find>mdymodalBody</find>
+      <find>adminTbody</find>
+      <find>删除</find>
+      <find>提交</find>
+      <find>route_node.id</find>
+      <find>lineData</find>
+      <find>data</find>
+      <find>650px</find>
+      <find>163</find>
+      <find>{% block content %}</find>
+      <find>css</find>
+      <find>查询</find>
+      <find>search-order</find>
+      <find>display: none</find>
+      <find>highcharts-credits</find>
+      <find>cell_overwrite_ok</find>
+      <find>worksheet</find>
+      <find>eptTbody</find>
+      <find>modalB</find>
+      <find>promBox</find>
+      <find>login_out</find>
+      <find>clearfix</find>
+      <find>container-fluid</find>
+      <find>copyright</find>
+      <find>span3</find>
+      <find>ByteTransform</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/templates/charts.html" />
+        <option value="$PROJECT_DIR$/address/urls.py" />
+        <option value="$PROJECT_DIR$/address/views.py" />
+        <option value="$PROJECT_DIR$/static/js/chart.js" />
+        <option value="$PROJECT_DIR$/static/js/highcharts.js" />
+        <option value="$PROJECT_DIR$/static/js/drilldown.js" />
+        <option value="$PROJECT_DIR$/static/js/exporting.js" />
+        <option value="$PROJECT_DIR$/static/js/data.js" />
+        <option value="$PROJECT_DIR$/static/js/export-data.js" />
+        <option value="$PROJECT_DIR$/log/all.log" />
+        <option value="$PROJECT_DIR$/static/js/klorofil-common.js" />
+        <option value="$PROJECT_DIR$/static/js/menu.js" />
+        <option value="$PROJECT_DIR$/static/js/laydate.js" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/bb79accb-36d0-4a88-be9a-13c316ba3f49/console.sql" />
+        <option value="$PROJECT_DIR$/static/js/jquery.form.js" />
+        <option value="$PROJECT_DIR$/static/js/template.js" />
+        <option value="$PROJECT_DIR$/templates/search.html" />
+        <option value="$PROJECT_DIR$/warehouse/rizhi.py" />
+        <option value="$PROJECT_DIR$/static/css/highcharts.css" />
+        <option value="$PROJECT_DIR$/venv/Lib/site-packages/xlwt/Row.py" />
+        <option value="$PROJECT_DIR$/download/core/FileHandle.py" />
+        <option value="$PROJECT_DIR$/log/urls.py" />
+        <option value="$PROJECT_DIR$/log/views.py" />
+        <option value="$PROJECT_DIR$/static/js/table1.js" />
+        <option value="$PROJECT_DIR$/static/css/main.css" />
+        <option value="$PROJECT_DIR$/static/js/page.js" />
+        <option value="$PROJECT_DIR$/static/js/table.js" />
+        <option value="$PROJECT_DIR$/static/js/userConf.js" />
+        <option value="$PROJECT_DIR$/static/css/bootstrap-responsive.min.css" />
+        <option value="$PROJECT_DIR$/static/css/bootstrap.css" />
+        <option value="$PROJECT_DIR$/manage.py" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/10161af9-e806-436e-a52e-e5f63bb3135e/console.sql" />
+        <option value="$PROJECT_DIR$/plog1/__init__.py" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/a5511dbf-b868-4aaf-ab05-12c275f1b080/console.sql" />
+        <option value="$PROJECT_DIR$/../udp_client的副本.py" />
+        <option value="$PROJECT_DIR$/warehouse/models.py" />
+        <option value="$PROJECT_DIR$/templates/userConf.html" />
+        <option value="$PROJECT_DIR$/warehouse/urls.py" />
+        <option value="$PROJECT_DIR$/templates/route.html" />
+        <option value="$PROJECT_DIR$/plog1/settings.py" />
+        <option value="$PROJECT_DIR$/plog1/urls.py" />
+        <option value="$PROJECT_DIR$/warehouse/views.py" />
+        <option value="$PROJECT_DIR$/uwsgi.ini" />
+        <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/templates/page-login.html" />
+        <option value="$PROJECT_DIR$/templates/conveyerLine.html" />
+        <option value="$PROJECT_DIR$/templates/lineNomalLog.html" />
+        <option value="$PROJECT_DIR$/templates/address.html" />
+        <option value="$PROJECT_DIR$/warehouse/migrations/supertest.py" />
+        <option value="$PROJECT_DIR$/warehouse/supertest.py" />
+        <option value="$PROJECT_DIR$/warehouse/HslCommunication.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="36" />
+    <option name="y" value="23" />
+    <option name="width" value="1234" />
+    <option name="height" value="731" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="plog1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="plog1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="plog1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="plog1" type="462c0819:PsiDirectoryNode" />
+              <item name="plog1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="plog1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="plog1" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="plog1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="plog1" type="462c0819:PsiDirectoryNode" />
+              <item name="warehouse" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="database.console.LAST_STATE" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\PycharmProjects\plog1\warehouse" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\PycharmProjects\plog1\static\css" />
+      <recent name="C:\Users\Administrator\PycharmProjects\plog1\static\js" />
+      <recent name="C:\Users\Administrator\PycharmProjects\plog1\templates" />
+      <recent name="C:\Users\Administrator\PycharmProjects\plog1" />
+      <recent name="C:\Users\Administrator\PycharmProjects\plog1\warehouse" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Django server.plog1">
+    <configuration name="models" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="plog1" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$USER_HOME$/PycharmProjects/test/venv/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/warehouse" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/warehouse/models.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
+      <module name="plog1" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$USER_HOME$/PycharmProjects/test/venv/bin/python" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="plog1" type="Python.DjangoServer" factoryName="Django server">
+      <module name="plog1" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="plog1.settings" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/local/bin/python3.7" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/plog1" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Django server.plog1" />
+      <item itemvalue="Python.models" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.models" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d1e265e8-8a6f-4e70-bf7f-340ef6cff9f8" name="Default Changelist" comment="" />
+      <created>1541556085543</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1541556085543</updated>
+      <workItem from="1565745559576" duration="11571000" />
+      <workItem from="1567412605256" duration="255000" />
+      <workItem from="1567584131790" duration="7000" />
+      <workItem from="1567652046227" duration="923000" />
+      <workItem from="1567657677702" duration="3090000" />
+      <workItem from="1568258018642" duration="417000" />
+      <workItem from="1568710357084" duration="116000" />
+      <workItem from="1568772449232" duration="5093000" />
+      <workItem from="1568795449850" duration="765000" />
+      <workItem from="1569837319937" duration="2288000" />
+      <workItem from="1570780715048" duration="944000" />
+      <workItem from="1571044517113" duration="22000" />
+      <workItem from="1571122914262" duration="1426000" />
+      <workItem from="1571132828700" duration="912000" />
+      <workItem from="1571210524916" duration="1165000" />
+      <workItem from="1571215437112" duration="482000" />
+      <workItem from="1571216529499" duration="3146000" />
+      <workItem from="1571275394839" duration="852000" />
+      <workItem from="1571389850573" duration="1924000" />
+      <workItem from="1571648161080" duration="6632000" />
+      <workItem from="1571728145911" duration="1037000" />
+      <workItem from="1571910543482" duration="4670000" />
+      <workItem from="1571967107585" duration="10262000" />
+      <workItem from="1571996049053" duration="2667000" />
+      <workItem from="1573011462976" duration="82000" />
+      <workItem from="1573022200273" duration="1562000" />
+      <workItem from="1573451011989" duration="4026000" />
+      <workItem from="1573463398100" duration="1523000" />
+      <workItem from="1574847802267" duration="160000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="68019000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="36" y="23" width="1234" height="731" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49624062" visible="true" weight="0.21308725" />
+      <window_info id="Structure" order="1" sideWeight="0.5037594" side_tool="true" weight="0.17019667" />
+      <window_info id="Favorites" order="2" sideWeight="0.503386" side_tool="true" weight="0.21860817" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49748322" weight="0.33020344" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3255086" />
+      <window_info anchor="bottom" id="Database Console" order="7" sideWeight="0.4977307" visible="true" weight="0.3885246" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" weight="0.34697217" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5025168" side_tool="true" weight="0.33020344" />
+      <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.49676898" weight="0.32394367" />
+      <window_info anchor="bottom" id="Terminal" order="13" sideWeight="0.49596122" weight="0.32394367" />
+      <window_info anchor="bottom" id="Concurrent Activities Diagram" order="14" weight="0.3286385" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" weight="0.024232633" />
+      <window_info anchor="right" id="Coverage" order="5" side_tool="true" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49624062" visible="true" weight="0.20302014" />
+      <window_info id="Structure" order="1" sideWeight="0.5037594" side_tool="true" weight="0.17019667" />
+      <window_info id="Favorites" order="2" sideWeight="0.503386" side_tool="true" weight="0.21860817" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.33020344" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3255086" />
+      <window_info anchor="bottom" id="Database Console" order="7" sideWeight="0.4977307" visible="true" weight="0.3885246" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" weight="0.34697217" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50403875" side_tool="true" weight="0.32423756" />
+      <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.49676898" weight="0.32394367" />
+      <window_info anchor="bottom" id="Terminal" order="13" sideWeight="0.49596122" weight="0.32394367" />
+      <window_info anchor="bottom" id="Concurrent Activities Diagram" order="14" weight="0.3286385" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" weight="0.024232633" />
+      <window_info anchor="right" id="Coverage" order="5" side_tool="true" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/static/js/bootstrap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1617" column="46" lean-forward="true" selection-start-line="1617" selection-start-column="46" selection-end-line="1617" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="817">
+          <caret line="1636" column="11" lean-forward="true" selection-start-line="1636" selection-start-column="11" selection-end-line="1636" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/10161af9-e806-436e-a52e-e5f63bb3135e/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/3facdee1-5b3c-4015-8122-91837eaab8f4/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plog1/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="28" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/a5511dbf-b868-4aaf-ab05-12c275f1b080/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../udp_client的副本.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="31" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/warehouse/apps.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../TestPlc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="112" column="23" selection-start-line="112" selection-start-column="16" selection-end-line="112" selection-end-column="23" />
+          <folding>
+            <element signature="e#29#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/warehouse/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/warehouse/migrations/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/warehouse/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2700">
+          <caret line="180" selection-start-line="180" selection-end-line="180" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/warehouse/tests.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/warehouse/admin.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/warehouse/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/toastr.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uwsgi.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plog1/wsgi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="13" column="54" selection-start-line="13" selection-start-column="49" selection-end-line="13" selection-end-column="54" />
+          <folding>
+            <element signature="e#221#230#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/socket.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10665">
+          <caret line="715" selection-start-line="715" selection-end-line="715" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plog1/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="71" selection-start-line="10" selection-start-column="71" selection-end-line="10" selection-end-column="71" />
+          <folding>
+            <element signature="e#629#670#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/img/logo-ico.ico">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/img/profile-bg.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/img/RFID.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/img/login-banner.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
+          <folding>
+            <element signature="e#23#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="922">
+          <caret line="2312" selection-start-line="2312" selection-end-line="2312" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/font-awesome.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-49" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/img/logo.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/route.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="224" column="32" selection-start-line="224" selection-start-column="28" selection-end-line="224" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/page.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-102">
+          <caret line="57" column="30" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/table.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/table1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="39" column="23" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/template.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1579">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/chartist.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-53530" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/data.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-278">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/toastr.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6016">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#22#29#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/laydate.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/menu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/npm.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/address.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2729">
+          <caret line="215" selection-start-line="215" selection-end-line="215" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/warehouse/migrations/supertest.py" />
+    <entry file="file://$PROJECT_DIR$/warehouse/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5340">
+          <caret line="368" selection-start-line="368" selection-end-line="368" />
+          <folding>
+            <element signature="e#0#53#0" expanded="true" />
+            <marker date="1571709251626" expanded="true" signature="751:764" ph="..." />
+            <marker date="1571709251626" expanded="true" signature="2579:2584" ph="..." />
+            <marker date="1571709251626" expanded="true" signature="7309:7314" ph="..." />
+            <marker date="1571709251626" expanded="false" signature="7407:7408" ph="..." />
+            <marker date="1571709251626" expanded="true" signature="7808:7813" ph="..." />
+            <marker date="1571709251626" expanded="false" signature="8230:8231" ph="..." />
+            <marker date="1571709251626" expanded="true" signature="8612:8613" ph="..." />
+            <marker date="1571709251626" expanded="true" signature="13518:13519" ph="..." />
+            <marker date="1571709251626" expanded="true" signature="15706:15711" ph="..." />
+            <marker date="1571709251626" expanded="true" signature="16006:16011" ph="..." />
+            <marker date="1571709251626" expanded="true" signature="16464:16469" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/warehouse/HslCommunication.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3720">
+          <caret line="257" column="39" selection-start-line="257" selection-start-column="39" selection-end-line="257" selection-end-column="39" />
+          <folding>
+            <element signature="e#7647#7660#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/warehouse/migrations/0001_initial.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/lineNomalLog.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1455">
+          <caret line="97" column="39" selection-start-line="97" selection-start-column="39" selection-end-line="97" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1770">
+          <caret line="118" column="41" selection-start-line="118" selection-start-column="41" selection-end-line="118" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/page-login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/conveyerLine.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2760">
+          <caret line="184" column="66" selection-start-line="184" selection-start-column="66" selection-end-line="184" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/warehouse/supertest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/userConf.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4635">
+          <caret line="309" column="53" selection-start-line="309" selection-start-column="53" selection-end-line="309" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plog1/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="499">
+          <caret line="139" lean-forward="true" selection-start-line="139" selection-end-line="139" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
